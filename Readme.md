@@ -5,6 +5,9 @@
 * [Default.aspx.cs](./CS/WebSite/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/WebSite/Default.aspx.vb))
 <!-- default file list end -->
 # CustomFieldValueCells: Hide rows or columns with Grand Total values equal to 0
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e4085/)**
+<!-- run online end -->
 
 
 <p>It is necessary to handle the <a href="http://documentation.devexpress.com/#AspNet/DevExpressWebASPxPivotGridASPxPivotGrid_CustomFieldValueCellstopic"><u>CustomFieldValueCells</u></a> event to accomplish this task. </p><p>See Also: <br />
