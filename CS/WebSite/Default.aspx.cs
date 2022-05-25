@@ -72,13 +72,13 @@ public static class PivotHelper {
     public const string WidgetC = Widget + " C";
 
     public static void FillPivot(ASPxPivotGrid pivot) {
-        pivot.Fields.Add(Employee, PivotArea.RowArea);
-        pivot.Fields.Add(Widget, PivotArea.RowArea);
-        pivot.Fields.Add(Month, PivotArea.ColumnArea).AreaIndex = 0;
-        pivot.Fields.Add(RetailPrice, PivotArea.DataArea);
-        pivot.Fields.Add(WholesalePrice, PivotArea.DataArea);
-        pivot.Fields.Add(Quantity, PivotArea.DataArea);
-        pivot.Fields.Add(Remains, PivotArea.DataArea);
+        pivot.Fields.AddDataSourceColumn(Employee, PivotArea.RowArea);
+        pivot.Fields.AddDataSourceColumn(Widget, PivotArea.RowArea);
+        pivot.Fields.AddDataSourceColumn(Month, PivotArea.ColumnArea).AreaIndex = 0;
+        pivot.Fields.AddDataSourceColumn(RetailPrice, PivotArea.DataArea);
+        pivot.Fields.AddDataSourceColumn(WholesalePrice, PivotArea.DataArea);
+        pivot.Fields.AddDataSourceColumn(Quantity, PivotArea.DataArea);
+        pivot.Fields.AddDataSourceColumn(Remains, PivotArea.DataArea);
         foreach(PivotGridField field in pivot.Fields) {
             field.AllowedAreas = GetAllowedArea(field.Area);
         }

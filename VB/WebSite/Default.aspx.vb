@@ -89,14 +89,14 @@ Public NotInheritable Class PivotHelper
 	Private Sub New()
 	End Sub
 	Public Shared Sub FillPivot(ByVal pivot As ASPxPivotGrid)
-		pivot.Fields.Add(Employee, PivotArea.RowArea)
-		pivot.Fields.Add(Widget, PivotArea.RowArea)
-		pivot.Fields.Add(Month, PivotArea.ColumnArea).AreaIndex = 0
-		pivot.Fields.Add(RetailPrice, PivotArea.DataArea)
-		pivot.Fields.Add(WholesalePrice, PivotArea.DataArea)
-		pivot.Fields.Add(Quantity, PivotArea.DataArea)
-		pivot.Fields.Add(Remains, PivotArea.DataArea)
-		For Each field As PivotGridField In pivot.Fields
+        pivot.Fields.AddDataSourceColumn(Employee, PivotArea.RowArea)
+        pivot.Fields.AddDataSourceColumn(Widget, PivotArea.RowArea)
+        pivot.Fields.AddDataSourceColumn(Month, PivotArea.ColumnArea).AreaIndex = 0
+        pivot.Fields.AddDataSourceColumn(RetailPrice, PivotArea.DataArea)
+        pivot.Fields.AddDataSourceColumn(WholesalePrice, PivotArea.DataArea)
+        pivot.Fields.AddDataSourceColumn(Quantity, PivotArea.DataArea)
+        pivot.Fields.AddDataSourceColumn(Remains, PivotArea.DataArea)
+        For Each field As PivotGridField In pivot.Fields
 			field.AllowedAreas = GetAllowedArea(field.Area)
 		Next field
 		pivot.OptionsView.RowTotalsLocation = PivotRowTotalsLocation.Far
